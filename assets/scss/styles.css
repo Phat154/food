@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #9966FF	;
+    --background-color: #f2e6ff;
+    --text-color: antiquewhite;
+}
+.active {
+    display: block !important;
+}
+/* Header */
+#header {
+    position: fixed;
+    z-index: 1;
+    background-color: var(--primary-color);
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 2px 5px #fff;
+}
+.header-items{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 46px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.nav {
+    display: flex;
+}
+.nav li{
+    padding: 0 10px;
+    
+}
+.nav a{
+    
+    color: var(--text-color);
+}
+.search-btn {
+    padding: 0 14px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.search-box {
+    display: none;
+    padding: 0 6px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    line-height: 24px;
+    animation: showSearchAnimation 1.5s ease;
+}
+.search-icon{
+    padding: 12px;
+}
+.search-icon:hover, .nav li:hover {
+    background-color: #ccc;
+    opacity: 0.75;
+}
+
+/* Content */
+#contain {
+    padding-top: 46px;
+    background-color: var(--background-color);
+}
+/* slice */
+.slice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color)  url('https://img.freepik.com/free-photo/chicken-wings-barbecue-sweetly-sour-sauce-picnic-summer-menu-tasty-food-top-view-flat-lay_2829-6471.jpg?w=2000') fixed;
+}
+.slice li{
+    display: flex;
+    justify-content: center;
+}
+.slice-img{
+    display: none;
+    position: relative;
+    min-width: 590px;
+    max-width: 85%;
+    max-height: 708px;
+    margin: 0 auto;
+    animation: fade 1.5s;
+}
+.slice-wave {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    min-width: 590px;
+    width: 85%;
+}
+.slice-wave-btn {
+    height: 300px;
+    width: 100px;
+    border: none;
+    background-color: #000;
+    opacity: 0.1;
+}
+.btn-cricle:hover,
+.slice-wave-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.slice-cricle {
+    position:absolute;
+    align-self: flex-end;
+    display: flex;
+    padding: 8px;
+}
+.btn-icon {
+    color: #ccc;
+    font-size: 48px;
+}
+.btn-cricle {
+    padding: 6px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 6px;
+}
+.btn-cricle-highlight {
+    background-color: #9966FF;
+}
+
+/* food */
+#food {
+    background: var(--background-color);
+    padding:18px 0;
+}
+
+.title-page {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.food-items {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 0 auto;
+    min-width: 624px;
+    width: 80%;
+    max-width: 920px;
+}
+
+.food-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33333%;
+    margin: 0 8px;
+    background-color: var(--primary-color);
+    padding: 8px;
+    color: var(--text-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.food-item h2 {
+    padding: 6px 0px;
+}
+.food-item:hover {
+    box-shadow: 4px 3px 10px #888888;
+}
+.food-item-icon {
+    font-size: 42px;
+}
+
+/* review */
+#review {
+    min-width: 463px;
+    width: 80%;
+    max-width: 808px;
+    margin: 0 auto;
+    padding: 12px;
+    box-shadow: 4px 3px 10px var(--primary-color);
+}
+.review-content {
+    display: none;
+
+}
+.active-content {
+    display: block;
+}
+.active-item {
+    box-shadow: 4px 3px 10px var(--primary-color) !important;
+}
+
+/* footer */
+#footer {
+    margin-top: 18px;
+    height: 112px;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+#about > h3{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 0 auto;
+    width: 108px;
+    font-size: 20px;
+  
+}
+.contact-icon {
+    color: var(--text-color);
+}
+
+
+/* Animation */
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes showSearchAnimation {
+    from {opacity: .4;
+        background-color: var(--background-color);  
+    }
+    to {opacity: 1;}
+  }
