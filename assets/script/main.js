@@ -11,27 +11,9 @@ const btnCricle = $('.btn-cricle')
 
 const tabs = $$('.food-item')
 const contentItem = $$('.review-content')
-// const showSlides = function(n){
-//     let slideIndex = 0
-//     if(n > sliceLists.length){
-//         slideIndex =1}
-//     if(n<1){
-//         slideIndex=sliceLists.length}
-//     for (let i=0; i < sliceLists.length; i++){
-//         sliceLists[i].style.display = "none"
-//     }
-//     for (let i= 0; i < btnCricles.length; i++){
-//         btnCricles[i].className = btnCricles[i].className.replace(" btn-cricle-highlight", "");
-//     }
-//     console.log(sliceLists[slideIndex-1], sliceLists.length)
-
-//     sliceLists[slideIndex-1].style.display = "block";
-    // btnCricles[slideIndex-1].className += " btn-cricle-highlight";
-// }
 
 const app = {
     currentIndex: 0,
-    // config: JSON.parse(localStorage.getItem(PLAYER_STORE_KEYS)) || {},
     sliceImg: [
         {
             id: 0,
@@ -110,9 +92,6 @@ const app = {
         }, 3000)
     },
     start: function(){
-        // this.loadingSlides()
-
-        
         this.render()
         this.handleEvents()
     }
